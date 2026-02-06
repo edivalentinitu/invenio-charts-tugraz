@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2026 Graz University of Technology.
+# Copyright (C) 2026 Graz University of Technology
 #
-# Invenio-Jobs is free software; you can redistribute it and/or modify it
-# under the terms of the MIT License; see LICENSE file for more details.
+# Invenio-Charts-Tugraz is free software; you can redistribute it and/or
+# modify it under the terms of the MIT License; see LICENSE file for more
+# details.
 
 """JS/CSS Webpack bundles for charts-tugraz."""
 
@@ -16,11 +17,11 @@ administration = WebpackThemeBundle(
     themes={
         "semantic-ui": dict(
             entry={
-                "invenio-charts-tugraz": "./js/invenio_charts_tugraz/administration/index.js",
+                "invenio-charts-tugraz-rdm": "./js/invenio_charts_tugraz/administration/index.js",
             },
             dependencies={
                 "react-invenio-forms": "^4.0.0",
-                "recharts": "^3.0.0",
+                "recharts": "^2.0.0",
             },
         ),
     },

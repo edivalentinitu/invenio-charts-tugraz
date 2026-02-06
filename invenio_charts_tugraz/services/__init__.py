@@ -6,10 +6,12 @@
 # modify it under the terms of the MIT License; see LICENSE file for more
 # details.
 
-"""InvenioRDM module for charts."""
+"""Services module."""
 
-from .ext import InvenioChartsTugraz
+from .config import RdmChartsServiceConfig
+from .services import RdmChartsService
 
-__version__ = "0.0.1"
-
-__all__ = ("InvenioChartsTugraz", "__version__")
+__all__ = (
+    "RdmChartsService",
+    "RdmChartsServiceConfig",
+)

@@ -1,0 +1,29 @@
+{#
+  Copyright (C) 2026 Graz University of Technology.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{% extends "invenio_administration/base.html" %}
+
+{% block admin_main_column %}
+  <main
+    id="admin-main-content"
+    class="ten wide mobile twelve wide tablet thirteen wide computer fourteen wide widescreen column"
+  >
+    {% block admin_page_content %}
+    <div class="ui divider" aria-hidden="true"></div>
+    <div 
+        id="invenio-charts-tugraz-rdm"
+        data-api-endpoint='{{ api_endpoint }}'
+        data-chart-titles='{{ chart_titles | tojson }}'
+    ></div>
+    {% endblock admin_page_content %}
+{% endblock %}
+  </main>
+
+
+{% block javascript %}
+  {{ super() }}
+  {{ webpack['invenio-charts-tugraz-rdm.js'] }}
+{% endblock %}
