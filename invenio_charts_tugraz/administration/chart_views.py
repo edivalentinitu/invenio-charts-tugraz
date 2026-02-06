@@ -16,7 +16,7 @@ from invenio_administration.views.base import (
 
 
 class RdmChartsView(AdminResourceBaseView):
-    """Configuration for Jobs list view."""
+    """Configuration for rdm-charts admin view."""
 
     name: Final = "charts"
     title: Final = "RDM Charts"
